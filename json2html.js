@@ -1,5 +1,5 @@
 // json2html.js
-function json2html(data) {
+export default function json2html(data) {
   // Extract all unique keys across objects to handle missing columns
   const columns = [...new Set(data.flatMap(Object.keys))];
 
@@ -24,6 +24,3 @@ function json2html(data) {
 
   return html;
 }
-
-// Export the function using CommonJS syntax
-module.exports = json2html;
